@@ -3,63 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Drive Dashboard</title>
+  <title>Drive-It | Find Your Drive Files in One Click</title>
   <style>
-    body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 1rem; }
-    header { text-align: center; margin-bottom: 2rem; }
-    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    .sub { color: #555; margin-bottom: 2rem; }
-    section { margin-bottom: 2rem; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; }
-    .card { border: 1px solid #ddd; padding: 1rem; border-radius: 8px; }
-    footer { text-align: center; color: #777; font-size: 0.9rem; margin-top: 3rem; }
-    .cta { display: inline-block; padding: 0.75rem 1.5rem; background:#007acc; color:#fff; border-radius:4px; text-decoration:none; }
+    :root {
+      --primary: #007acc;
+      --light: #f4f6f8;
+      --dark: #333;
+      --accent: #ffb900;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--dark);
+      background: var(--light);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.75rem;
+    }
+    header p.sub {
+      margin: 0.5rem 0 1.5rem;
+      font-size: 1.25rem;
+    }
+    .cta {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent);
+      color: var(--dark);
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .cta:hover {
+      background: #e6a600;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    section h2 {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    ol {
+      padding-left: 1.2rem;
+    }
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 0.9rem;
+      padding: 1rem 0;
+      border-top: 1px solid #ddd;
+      background: white;
+    }
+    footer a { color: var(--primary); text-decoration: none; }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Find Your Drive Files in One Click</h1>
-    <p class="sub">A custom, permission-aware link dashboard for your Google Drive—deployed in 1 hour, no servers required.</p>
+    <h1>Drive-It</h1>
+    <p class="sub">Find Your Drive Files in One Click</p>
     <a href="#contact" class="cta">Book a Demo</a>
   </header>
-
-  <section id="problem">
-    <h2>The Problem</h2>
-    <div class="cards">
-      <div class="card"><strong>🔍 Hours lost</strong><p>Hunting nested folders for the right file.</p></div>
-      <div class="card"><strong>❓ Lost context</strong><p>Multiple “Lesson Plan v2” across subfolders.</p></div>
-      <div class="card"><strong>👩‍🏫 Onboarding friction</strong><p>New staff can’t find policies or handbooks.</p></div>
-    </div>
-  </section>
-
-  <section id="solution">
-    <h2>Our Solution</h2>
-    <div class="cards">
-      <div class="card"><strong>Consultant-led Curation</strong><p>We map your top tabs, folders, subfolders.</p></div>
-      <div class="card"><strong>Zero-Infra Setup</strong><p>Apps Script deploy in about 1 hour—no servers.</p></div>
-      <div class="card"><strong>Permission-Aware</strong><p>Users only see the links they already have access to.</p></div>
-    </div>
-  </section>
-
-  <section id="how-it-works">
-    <h2>How It Works</h2>
-    <ol>
-      <li>Kick-off call to identify your key Drive assets</li>
-      <li>We build &amp; deploy your custom dashboard</li>
-      <li>You click &amp; find—no training required</li>
-    </ol>
-  </section>
-
-  <section id="contact">
-    <h2>Get Started</h2>
-    <p>Ready to cut your Drive search time in half?</p>
-    <a href="https://calendly.com/your-link" class="cta">Book a 15-min Demo</a>
-  </section>
-
+  <main>
+    <section id="problem">
+      <h2>The Problem</h2>
+      <div class="cards">
+        <div class="card"><strong>🔍 Hours Lost</strong><p>Hunting through nested folders for the right file.</p></div>
+        <div class="card"><strong>❓ Lost Context</strong><p>Multiple versions of documents across subfolders.</p></div>
+        <div class="card"><strong>👩‍🏫 Onboarding Friction</strong><p>New staff can’t quickly find policies, handbooks, or templates.</p></div>
+      </div>
+    </section>
+    <section id="solution">
+      <h2>Our Solution</h2>
+      <div class="cards">
+        <div class="card"><strong>Consultant-led Curation</strong><p>We map your key Drive tabs, folders, and files.</p></div>
+        <div class="card"><strong>Zero-Infra Deployment</strong><p>Apps Script overlay deployed in about 1 hour—no servers needed.</p></div>
+        <div class="card"><strong>Permission-Aware Dashboard</strong><p>Each user sees only links they already have access to.</p></div>
+      </div>
+    </section>
+    <section id="offer">
+      <h2>What We Offer</h2>
+      <ul>
+        <li>Custom link dashboard tailored to your organization’s Drive structure</li>
+        <li>Branding & colour-coding to match your school or company style</li>
+        <li>Simple admin interface for future link updates</li>
+        <li>Optional CSV export & backup of your link map</li>
+        <li>15-minute training session for your team</li>
+      </ul>
+    </section>
+    <section id="how-it-works">
+      <h2>How It Works</h2>
+      <ol>
+        <li>Kick-off call to identify your key Drive assets</li>
+        <li>We build & deploy your custom Drive-It dashboard</li>
+        <li>You click & find—no training required</li>
+      </ol>
+    </section>
+    <section id="faq">
+      <h2>FAQ</h2>
+      <div class="cards">
+        <div class="card"><strong>What happens when I book a demo?</strong><p>You’ll be taken to our Calendly page to choose a time; rescheduling or prep instructions are included in your confirmation email.</p></div>
+        <div class="card"><strong>Is my data safe?</strong><p>No files are moved or copied—Drive-It simply links to items you already own, respecting Google Drive permissions.</p></div>
+        <div class="card"><strong>Can I update links later?</strong><p>Yes—your admin gets a simple interface to add, remove, or re-categorize links anytime.</p></div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Get Started</h2>
+      <p>Ready to cut your Drive search time in half? Click below to book a 15-min demo:</p>
+      <a href="https://calendly.com/your-link" class="cta">Book a Demo</a>
+    </section>
+  </main>
   <footer>
-    © 2025 Your Company · <a href="mailto:you@yourdomain.com">you@yourdomain.com</a>
+    © 2025 Drive-It · <a href="mailto:you@yourdomain.com">you@yourdomain.com</a>
   </footer>
-
 </body>
 </html>
